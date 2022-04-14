@@ -8,7 +8,7 @@ local storage = require('app.roles.storage')
 local utils = storage.utils
 local deepcopy = helper.shared.deepcopy
 
-local s = { ["name"] = 'Mersedes', ["model"] = 'AMG'}
+local s = { ["firm"] = 'Mersedes', ["model"] = 'AMG'}
 local val = deepcopy(s)
 local test_car = {
     key = "1",

@@ -19,5 +19,3 @@ COPY . /home/cars-storage
 WORKDIR /home/cars-storage
 
 RUN cartridge build
-
-CMD ["cartridge", "start"]

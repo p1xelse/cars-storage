@@ -6,7 +6,7 @@ local cluster = helper.cluster
 local deepcopy = require('table').deepcopy
 
 
-local s = { ["name"] = 'War and peace', ["author"] = 'Leo Tolstoy'}
+local s = { ["firm"] = 'Mersedes', ["model"] = 'AMG'}
 local val = deepcopy(s)
 local test_car = {
     key = "1",
@@ -41,7 +41,8 @@ end
 
 g.test_on_put_not_found = function()
     local changes = {
-        ['year'] = '2020'
+        ['firm'] = 'BMW',
+        ['model'] = 'M5'
     }
     helper.assert_http_json_request('put', '/kv/2', {value = changes},{body = {info = "car not found"}, status = 404})
 end
